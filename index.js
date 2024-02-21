@@ -26,7 +26,9 @@ app.use("/transactions", transacationRoutes);
 
 const PORT = 8000 || process.env.PORT;
 
-
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
 
 //listen server
 app.listen(PORT, () => {
